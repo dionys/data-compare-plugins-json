@@ -1,12 +1,13 @@
 NAME
 
-Data::Compare::Plugins::JSON::XS - plugin for Data::Compare to handle
-JSON::XS::Boolean objects.
+Data::Compare::Plugins::JSON - plugin for Data::Compare to handle
+JSON::PP::Boolean and JSON::XS::Boolean objects.
 
 DESCRIPTION
 
-JSON::XS provides two instances of JSON::XS::Boolean class. It's
-JSON::XS::true and JSON::XS::false. This plugin enables Data::Compare to
+JSON::PP and JSON::XS provides instances of JSON::PP::Boolean and
+JSON::XS::Boolean classes. It's JSON::PP::true, JSON::PP::false,
+JSON::XS::true, and JSON::XS::false. This plugin enables Data::Compare to
 compare this values.
 
 INSTALLATION
@@ -23,20 +24,20 @@ SUPPORT AND DOCUMENTATION
 After installing, you can find documentation for this module with the perldoc
 command.
 
-    perldoc Data::Compare::Plugins::JSON::XS
+    perldoc Data::Compare::Plugins::JSON
 
 You can also look for information at:
 
     Repository
-        http://github.com/dionys/data-compare-plugins-json-xs
+        http://github.com/dionys/data-compare-plugins-json
     Bug tracker
-        http://github.com/dionys/data-compare-plugins-json-xs/issues
+        http://github.com/dionys/data-compare-plugins-json/issues
     Annotated CPAN documentation
-        http://annocpan.org/dist/Data-Compare-Plugins-JSON-XS
+        http://annocpan.org/dist/Data-Compare-Plugins-JSON
     CPAN Ratings
-        http://cpanratings.perl.org/d/Data-Compare-Plugins-JSON-XS
+        http://cpanratings.perl.org/d/Data-Compare-Plugins-JSON
     Search CPAN
-        http://search.cpan.org/dist/Data-Compare-Plugins-JSON-XS/
+        http://search.cpan.org/dist/Data-Compare-Plugins-JSON/
 
 AUTHOR
 
