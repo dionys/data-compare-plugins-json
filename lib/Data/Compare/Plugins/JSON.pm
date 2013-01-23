@@ -3,15 +3,27 @@ package Data::Compare::Plugins::JSON;
 use strict;
 use warnings;
 
+use Data::Compare qw(Compare);
+
 
 our $VERSION = '0.01';
 
 
+sub _compare_object_and_object {
+	return $_[0] == $_[1] ? 1 : 0;
+}
+
+sub _compare_object_and_scalar {
+	return Compare(${$_[0]}, $_[1]) if ref($_[0]);
+	return Compare($_[0], ${$_[1]});
+}
+
+
 [
-	['JSON::PP::Boolean',     sub { $_[0] == $_[1] ? 1 : 0 }],
-	['JSON::PP::Boolean', '', sub { $_[0] == $_[1] ? 1 : 0 }],
-	['JSON::XS::Boolean',     sub { $_[0] == $_[1] ? 1 : 0 }],
-	['JSON::XS::Boolean', '', sub { $_[0] == $_[1] ? 1 : 0 }],
+	['JSON::PP::Boolean',     \&_compare_object_and_object],
+	['JSON::PP::Boolean', '', \&_compare_object_and_scalar],
+	['JSON::XS::Boolean',     \&_compare_object_and_object],
+	['JSON::XS::Boolean', '', \&_compare_object_and_scalar],
 ];
 
 
@@ -35,8 +47,8 @@ compare this values.
 ordinary scalar
 
 If you compare a scalar and a JSON::PP::Boolean or JSON::XS::Boolean object,
-then they will be considered the same if the two values are equal for C<==>
-operator.
+then they will be compared as scalar and C<0> (for *::false) or C<1>(for
+*::true).
 
 =item comparing two JSON::PP::Boolean or JSON::XS::Boolean objects
 

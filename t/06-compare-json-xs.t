@@ -24,7 +24,7 @@ for (
 	[JSON::XS::true,  0,               0],
 	[JSON::XS::true,  1,               1],
 ) {
-	ok(Compare($_->[0], $_->[1]) eq $_->[2]);
+	ok(Compare($_->[0], $_->[1]) == $_->[2]);
 }
 
 done_testing();
