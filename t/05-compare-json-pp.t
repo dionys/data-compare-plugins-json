@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use Test::More;
+
+
+BEGIN {
+	plan(skip_all => 'JSON::PP required for this test')
+		unless eval('use JSON::PP (); 1');
+}
+
+use Data::Compare;
+
+
+for (
+	[JSON::PP::false, JSON::PP::false, 1],
+	[JSON::PP::false, JSON::PP::true,  0],
+	[JSON::PP::true,  JSON::PP::false, 0],
+	[JSON::PP::true,  JSON::PP::true,  1],
+) {
+	ok(Compare($_->[0], $_->[1]) eq $_->[2]);
+}
+
+done_testing();
