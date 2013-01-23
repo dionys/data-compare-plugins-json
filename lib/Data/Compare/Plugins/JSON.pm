@@ -1,4 +1,4 @@
-package Data::Compare::Plugins::JSON::XS;
+package Data::Compare::Plugins::JSON;
 
 use strict;
 use warnings;
