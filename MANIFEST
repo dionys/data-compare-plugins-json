@@ -2,7 +2,6 @@ Changes
 lib/Data/Compare/Plugins/JSON.pm
 Makefile.PL
 MANIFEST
-MANIFEST.SKIP
 META.json
 META.yml
 README
