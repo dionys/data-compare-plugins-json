@@ -8,12 +8,12 @@ use ExtUtils::MakeMaker;
 
 
 WriteMakefile(
-	NAME          => 'Data::Compare::Plugins::JSON',
-	AUTHOR        => 'Denis Ibaev <dionys@cpan.org>',
-	VERSION_FROM  => 'lib/Data/Compare/Plugins/JSON.pm',
-	ABSTRACT_FROM => 'lib/Data/Compare/Plugins/JSON.pm',
-	LICENSE       => 'perl',
-	META_MERGE    => {
+	NAME           => 'Data::Compare::Plugins::JSON',
+	AUTHOR         => 'Denis Ibaev <dionys@cpan.org>',
+	VERSION_FROM   => 'lib/Data/Compare/Plugins/JSON.pm',
+	ABSTRACT_FROM  => 'lib/Data/Compare/Plugins/JSON.pm',
+	LICENSE        => 'perl',
+	META_MERGE     => {
 		requires  => {perl => '5.008000'},
 		resources => {
 			license     => 'http://dev.perl.org/licenses/',
@@ -24,10 +24,6 @@ WriteMakefile(
 	},
 	BUILD_REQUIRES => {
 		'Test::More'    => 0,
-	},
-	TEST_REQUIRES => {
-		'JSON'          => 0,
-		'JSON::XS'      => 0,
 	},
 	PREREQ_PM      => {
 		'Data::Compare' => 0,
