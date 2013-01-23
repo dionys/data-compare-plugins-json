@@ -17,8 +17,12 @@ use Data::Compare;
 for (
 	[JSON::PP::false, JSON::PP::false, 1],
 	[JSON::PP::false, JSON::PP::true,  0],
+	[JSON::PP::false, 0,               1],
+	[JSON::PP::false, 1,               0],
 	[JSON::PP::true,  JSON::PP::false, 0],
 	[JSON::PP::true,  JSON::PP::true,  1],
+	[JSON::PP::true,  0,               0],
+	[JSON::PP::true,  1,               1],
 ) {
 	ok(Compare($_->[0], $_->[1]) eq $_->[2]);
 }
