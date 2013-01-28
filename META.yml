@@ -1,5 +1,5 @@
 ---
-abstract: 'Plugin for L<Data::Compare> to handle JSON::PP::Boolean and JSON::XS::Boolean objects'
+abstract: 'Plugin for Data::Compare to handle JSON::PP::Boolean and JSON::XS::Boolean objects'
 author:
     - 'Denis Ibaev <dionys@cpan.org>'
 build_requires:
