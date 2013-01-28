@@ -47,7 +47,7 @@ compare this values.
 ordinary scalar
 
 If you compare a scalar and a JSON::PP::Boolean or JSON::XS::Boolean object,
-then they will be compared as scalar and C<0> (for *::false) or C<1>(for
+then they will be compared as scalar and C<0> (for *::false) or C<1> (for
 *::true).
 
 =item comparing two JSON::PP::Boolean or JSON::XS::Boolean objects
