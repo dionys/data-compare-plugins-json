@@ -1,7 +1,7 @@
 NAME
 
-Data::Compare::Plugins::JSON - plugin for Data::Compare to handle
-JSON::PP::Boolean and JSON::XS::Boolean objects.
+Data::Compare::Plugins::JSON - plugin for Data::Compare to handle JSON::PP and
+JSON::XS boolean constants.
 
 DESCRIPTION
 

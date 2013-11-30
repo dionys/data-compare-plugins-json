@@ -31,14 +31,13 @@ __END__
 
 =head1 NAME
 
-Data::Compare::Plugins::JSON - plugin for L<Data::Compare> to handle
-JSON::PP::Boolean and JSON::XS::Boolean objects.
+Data::Compare::Plugins::JSON - Plugin for Data::Compare to handle JSON::PP and JSON::XS boolean constants.
 
 =head1 DESCRIPTION
 
 L<JSON::PP> and L<JSON::XS> provides instances of JSON::PP::Boolean and
 JSON::XS::Boolean classes. It's JSON::PP::true, JSON::PP::false,
-JSON::XS::true, and JSON::XS::false. This plugin enables Data::Compare to
+JSON::XS::true, and JSON::XS::false. This plugin enables L<Data::Compare> to
 compare this values.
 
 =over 4
