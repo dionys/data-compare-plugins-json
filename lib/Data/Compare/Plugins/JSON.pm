@@ -10,7 +10,7 @@ our $VERSION = '1.01';
 
 
 sub _compare_object_and_object {
-	return $_[0] == $_[1] ? 1 : 0;
+	return $_[0] eq $_[1] ? 1 : 0;
 }
 
 sub _compare_object_and_scalar {
