@@ -17,7 +17,6 @@ BEGIN {
 
 use Data::Compare;
 
-
 isa_ok (JSON->backend, 'JSON::XS');
 for (
 	[JSON::false, JSON::false, 1],
