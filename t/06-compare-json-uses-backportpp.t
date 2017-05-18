@@ -15,8 +15,7 @@ BEGIN {
 
 use Data::Compare;
 
-
-ok (JSON->backend eq 'JSON::PP');
+ok (JSON->backend->isa('JSON::PP'));
 for (
 	[JSON::false, JSON::false, 1],
 	[JSON::false, JSON::true,  0],
